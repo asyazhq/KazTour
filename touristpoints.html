@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+        </script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://kit.fontawesome.com/1dd4092fe7.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <title>KazTour: Multilingual Insight</title>
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa-solid fa-circle-chevron-up scrolltop__icon" style="color: #4e7499; font-size: 40px;"></i>
+    </button>
+
+    <section class="hero-anime">
+        <div class="navigation-wrap bg-light start-header start-style">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-md navbar-light">
+
+                            <a class="navbar-brand" href="index.html" target="_blank"><img src="assets/Logo__1.png"
+                                    width="100" height=100"></a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+                                        <a class="nav-link" href="index.html">Главная</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="gid.html">Путеводитель</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="phrases.html">Словарь</a>
+                                    </li>
+
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                        <a class="nav-link" href="touristpoints.html" role="button" aria-haspopup="true"
+                                            aria-expanded="false">Туристические точки</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="#footer">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section full-height">
+            <div class="absolute-center">
+                <div class="section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2><span>Т</span>уристические Точки</h2>
+                                <p>Открой новые горизонты вместе с нами: исследуй Туристические Точки!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="touristplaces">
+        <div class="section-title text-center">
+            <h2>Достопримечательности</h2>
+        </div>
+        <div class="container">
+            <div id="scene">
+                <div id="left-zone">
+                    <ul class="list">
+                        <li class="item">
+                            <input type="radio" id="radio_baiterek" name="basic_carousel" checked="checked" /><label
+                                class="label_1" for="radio_baiterek">Байтерек</label>
+                            <div class="content content_1"><span class="picto"></span>
+                                <h2>Байтерек</h2>
+                                <p><strong>Локация: </strong>Астана <br>
+                                    <strong>Как добраться: </strong> на общественном транспорте, на такси, на машине,
+                                    пешком <br>
+                                    <strong>Описание:</strong> Астана-Байтерек - один из главных символов страны,
+                                    олицетворяющий её процветание и благополучие.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <input type="radio" id="radio_medeo" name="basic_carousel" checked="checked" /><label
+                                class="label_2" for="radio_medeo">Медео</label>
+                            <div class="content content_2"><span class="picto"></span>
+                                <h2>Медео</h2>
+                                <p><strong>Локация: </strong>Алматы <br>
+                                    <strong>Как добраться: </strong> на общественном транспорте, на такси, на машине
+                                    <br>
+                                    <strong>Описание:</strong> В горном урочище Медео расположился одноимённый
+                                    спортивный комплекс - самый высокогорный в мире спорткомплекс, предназначенный для
+                                    занятий зимними видами спорта. <br>
+                                    <em>Официальный сайт: </em> <a href="http://medeu.com.kz/">http://medeu.com.kz/</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <input type="radio" id="radio_sobor" name="basic_carousel" checked="checked" /><label
+                                class="label_3" for="radio_sobor">Кафедральный Собор</label>
+                            <div class="content content_3"><span class="picto"></span>
+                                <h2>Вознесенский Кафедральный Собор</h2>
+                                <p><strong>Локация: </strong>Алматы <br>
+                                    <strong>Как добраться: </strong> на общественном транспорте, на такси, на машине,
+                                    пешком <br>
+                                    <strong>Описание:</strong> Религиозная достопримечательность Казахстана -
+                                    Вознесенский кафедральный собор Русской православной церкви. Его уникальная
+                                    особенность в том, что он сооружён из дерева в самом начале 20 века, и даже крупное
+                                    землетрясение не поколебало крепости этого сооружения.<br>
+                                    <em>Официальный сайт: </em> <a
+                                        href="http://cathedral.kz/ru">http://cathedral.kz/ru</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <input type="radio" id="radio_borovoe" name="basic_carousel" checked="checked" /><label
+                                class="label_4" for="radio_borovoe">Курорт Боровое</label>
+                            <div class="content content_4"><span class="picto"></span>
+                                <h2>Курорт Боровое</h2>
+                                <p><strong>Локация: </strong>Северный Казахстан между городами Кокшетау и Астаной <br>
+                                    <strong>Как добраться: </strong> от Астаны на электропоезде, такси, рейсовых
+                                    автобусах <br>
+                                    <strong>Описание:</strong> : Боровое (Бурабай) является одним из самых живописнейших
+                                    мест Казахстана. Величественные горы, стройные сосны, кристально чистые озера
+                                    являются главными атрибутами этого места, что в народе прозвали природной
+                                    жемчужиной. <br>
+                                    <em>Официальный сайт: </em> <a href="https://borovoe.kz/">https://borovoe.kz/</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <input type="radio" id="radio_canyon" name="basic_carousel" checked="checked" /><label
+                                class="label_5" for="radio_canyon">Чарынский каньон</label>
+                            <div class="content content_5"><span class="picto"></span>
+                                <h2>Чарынский каньон</h2>
+                                <p><strong>Локация: </strong>на юго-востоке Казахстана, на территории Чарынского
+                                    национального парка <br>
+                                    <strong>Как добраться: </strong> от Алматы на машине, на автобусе <br>
+                                    <strong>Описание:</strong> :Чарынский каньон — живописное глубокое ущелье в
+                                    Казахстане, протянувшееся на 154 км по долине реки Чарын, неподалеку от границы с
+                                    Китаем и Киргизией.<br>
+                                    <em>Официальный сайт: </em> <a
+                                        href="https://charyn-park.kz/">https://charyn-park.kz/</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <input type="radio" id="radio_mechet" name="basic_carousel" checked="checked" /><label
+                                class="label_6" for="radio_mechet">Подземная мечеть Бекет-ата</label>
+                            <div class="content content_6"><span class="picto"></span>
+                                <h2>Подземная мечеть Бекет-ата</h2>
+                                <p><strong>Локация: </strong>В местности Огланды в Мангистауской области<br>
+                                    <strong>Как добраться: </strong>от города Актау на машине<br>
+                                    <strong>Описание:</strong> Этот памятник культовой архитектуры датируется XVIII
+                                    веком. Местные утверждают, что после посещения могилки святого верующим даруется
+                                    излечение от любых недугов. <br>
+                                    <em>Официальный сайт: </em> <a
+                                        href="https://beket-ata.kz/ru/">https://beket-ata.kz/ru/</a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="middle-border"></div>
+                <div id="right-zone"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="culture">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Национальных особенности</h2>
+                <p>Погрузитесь в богатство национальных особенностей с нами!</p>
+            </div>
+            <div id="myBtnContainer">
+                <button class="btnFilter active" onclick="filterSelection('all')"> Все</button>
+                <button class="btnFilter" onclick="filterSelection('cloth')"> Одежда</button>
+                <button class="btnFilter" onclick="filterSelection('tradition')"> Традиции</button>
+                <button class="btnFilter" onclick="filterSelection('food')"> Блюда</button>
+            </div>
+            <div class="row">
+                <div class="column col-lg-4 cloth">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/taqia.png">
+                        </div>
+                        <div class="content">
+                            <h3>Такия</h3>
+                            <p>
+                                Казахская шапочка-тюбетейка, которую носят люди всех возрастов. Ее шьют из шелка,
+                                бархата, сукна и других материалов. Иногда такия служит подкладкой под другой головной
+                                убор.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 cloth">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/saykele.png">
+                        </div>
+                        <div class="content">
+                            <h3>Шапан</h3>
+                            <p>
+                                Просторный халат прямого кроя с длинными и широкими рукавами. Его шили из разных тканей
+                                — легких и плотных, однотонных и цветных. Шапаны украшали вышивкой, для парадной одежды
+                                ее выполняли золотыми нитками.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 cloth">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/chapan.png">
+                        </div>
+                        <div class="content">
+                            <h3>Саукеле</h3>
+                            <p>
+                                Cамый дорогой элемент в костюме невесты, который украшают драгоценными камнями, золотом
+                                или серебром, и другими элементами. Порой за него отдавали табун лошадей, и при этом,
+                                невеста надевала его лишь один раз – на свадьбу.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 tradition">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/quest.png">
+                        </div>
+                        <div class="content">
+                            <h3>Гостеприимства</h3>
+                            <p>
+                                Казахи - восточный народ, в котором очень сильны традиции гостеприимства. Любого гостя,
+                                даже незваного, следовало принять с уважением, предложить ему пищу и самое лучшее место
+                                в юрте.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 tradition">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/love.png">
+                        </div>
+                        <div class="content">
+                            <h3>Свадебные традиции</h3>
+                            <p>
+                                Свадьба – важный этап в жизни любого человека, но для казахов это еще более важное
+                                событие, которое сопровождается огромным числом обычаев и обрядов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 tradition">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/family.png">
+                        </div>
+                        <div class="content">
+                            <h3>Семейные традиции</h3>
+                            <p>
+                                Семья для казахов – это основа жизни. Семейные отношения, воспитание детей, принцип
+                                родственных связей – все это отражается в особенных обычаях и традициях казахского
+                                народа.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 food">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/beshbarmak.png">
+                        </div>
+                        <div class="content">
+                            <h3>Бешбармак</h3>
+                            <p>
+                                Термин «бешбармак» означает «пять пальцев», потому что кочевники раньше ели это блюдо
+                                руками. Бешбармак — это отварное, мелко нарезанное мясо, смешанное с вареной лапшой и
+                                приправленное пряностями с луковым соусом.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 food">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/bayrsak.png">
+                        </div>
+                        <div class="content">
+                            <h3>Баурсаки</h3>
+                            <p>
+                                Баурсаки - это кусочки дрожжевого теста, обжаренные в большом количестве масла. На вкус
+                                баурсаки сладковатые, могут выступать и отдельным блюдом. Но, как правило, баурсаки
+                                всегда едят с чем-то. Хорошая хозяйка подаст их не только к основному блюду, но и к чаю.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 food">
+                    <div class="item-single mb-30">
+                        <div class="image">
+                            <img src="kazakhstan/zhent.png">
+                        </div>
+                        <div class="content">
+                            <h3>Жент</h3>
+                            <p>
+                                Популярные блюда в Казахстане – не только мясные и молочные. Жент – это десерт из
+                                толченого творога, пшена, сахара, изюма и сливочного масла. После смешивания
+                                ингредиентов десерту можно придать любую форму. Когда жент застынет, его разрезают и
+                                подают к чаю.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <br><br><br>
+                    <h2 class="text-uppercase"> Контакты:</h2>
+                    <p><i class="fa-solid fa-house"></i> <strong>Astana IT University</strong></p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p><i class="fa-solid fa-envelope"></i> 220537@astanait.edu.kz</p>
+                            <p><i class="fa-solid fa-person"></i> <strong>Zhakanova Asem</strong></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><i class="fa-solid fa-envelope"></i> 220787@astanait.edu.kz</p>
+                            <p><i class="fa-solid fa-person"></i> <strong>Rahmetulina Asylzhan</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="slogan" class="col-lg-6 text-center">
+                    <h2 class="text-uppercase"><i class="fa-solid fa-earth-americas"></i> KazTour: Multilingual Insight
+                    </h2>
+                    <p>Освойте Казахстан на всех языках c <strong>KazTour</strong>: мультитуристический подход</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center">Copyright @2024 | Designed by Zhakanova Asem and Rahmetulina Asylzhan</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

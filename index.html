@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+        </script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://kit.fontawesome.com/1dd4092fe7.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <title>KazTour: Multilingual Insight</title>
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa-solid fa-circle-chevron-up scrolltop__icon" style="color: #4e7499; font-size: 40px;"></i>
+    </button>
+
+    <section id="landing">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><img src="assets/Logo__1.png" width="120" height=120"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gid.html">Путеводитель</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="phrases.html">Словарь</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="touristpoints.html">Туристические точки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+    <section id="carousel">
+        <div class="text-center"> <BR></BR>
+            <h2>KAZAKHSTAN</h2>
+        </div>
+        <div class="container">
+            <!-- main images -->
+            <div class="holder text-center">
+
+                <div class="slides">
+                    <img src="kazakhstan/5.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/2.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/3.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/4.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/6.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/7.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/8.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/9.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/10.jpg">
+                </div>
+
+                <div class="slides">
+                    <img src="kazakhstan/11.jpg">
+                </div>
+            </div>
+
+            <div class="prevContainer"><a class="prev" onclick="plusSlides(-1)">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+                    </svg>
+                </a></div>
+            <div class="nextContainer"><a class="next" onclick="plusSlides(1)">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                    </svg>
+                </a></div>
+
+            <!-- thumnails in a row -->
+            <div class="row text-center">
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/5.jpg" onclick="currentSlide(5)">
+                </div>
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/2.jpg" onclick="currentSlide(1)">
+                </div>
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/3.jpg" onclick="currentSlide(3)">
+                </div>
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/4.jpg" onclick="currentSlide(4)">
+                </div>
+
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/6.jpg" onclick="currentSlide(6)">
+                </div>
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/7.jpg" onclick="currentSlide(7)">
+                </div>
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/8.jpg" onclick="currentSlide(8)">
+                </div>
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/9.jpg" onclick="currentSlide(9)">
+                </div>
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/10.jpg" onclick="currentSlide(10)">
+                </div>
+
+                <div class="column">
+                    <img class="slide-thumbnail" src="kazakhstan/11.jpg" onclick="currentSlide(11)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutus">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2>Добро пожаловать на <em>KazTour: Multilingual Insight</em> - ваш компаньон в мире казахстанского
+                        туризма и культуры!</h2>
+                    <p>На KazTour мы предлагаем вам уникальный мультиязычный подход к изучению Казахстана. <br>
+                        Мы собрали для вас самую актуальную информацию о <strong>достопримечательностях</strong>,
+                        <strong>национальной кухне</strong>, <strong>традициях</strong> и <strong>культурных
+                            особенностях </strong>этой удивительной страны.
+                        Также на нашем сайте вы сможете найти <strong>базовые фразы</strong> для различных ситуаций!
+                        <strong>Наша цель</strong> - сделать ваше путешествие максимально комфортным, независимо от
+                        того, на каком языке вы говорите.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/aboutimage.png">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="whatyoucanfind">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Что Вы Можете Найти на Нашем Сайте?</h2>
+            </div>
+            <section class="row text-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="item-single mb-30">
+                        <i class="fa-regular fa-compass"></i>
+                        <a href="gid.html">
+                            <h3>Путеводитель</h3>
+                        </a>
+                        <p>Предоставляет всю необходимую информацию о транспорте, размещении, связи, финансах и
+                            интерактивной карте города для максимального комфорта и удовольствия вашего путешествия.</p>
+                        <br>
+                        <div class="cta-btn">
+                            <a href="gid.html" class="btn-primary">
+                                <p>Подробнее</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="item-single mb-30">
+                        <i class="fa-solid fa-book-atlas"></i>
+                        <a href="phrases.html">
+                            <h3>Cловарь</h3>
+                        </a>
+                        <p>Предоставляет базовые фразы, разделенные по ситуациям, чтобы помочь вам легко общаться и
+                            наслаждаться вашими приключениями без языковых барьеров.</p>
+                        <br>
+                        <div class="cta-btn">
+                            <a href="phrases.html" class="btn-primary">
+                                <p>Подробнее</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="item-single mb-30">
+                        <i class="fa-solid fa-landmark"></i>
+                        <a href="touristpoints.html">
+                            <h3>Туристические точки</h3>
+                        </a>
+                        <p>Предоставляет самые захватывающие достопримечательности, места и национальные кулинарные
+                            шедевры, чтобы сделать ваш опыт незабываемым и полным открытий.</p>
+                        <div class="cta-btn">
+                            <a href="touristpoints.html" class="btn-primary">
+                                <p>Подробнее</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <br><br><br>
+                    <h2 class="text-uppercase"> Контакты:</h2>
+                    <p><i class="fa-solid fa-house"></i> <strong>Astana IT University</strong></p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p><i class="fa-solid fa-envelope"></i> 220537@astanait.edu.kz</p>
+                            <p><i class="fa-solid fa-person"></i> <strong>Zhakanova Asem</strong></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><i class="fa-solid fa-envelope"></i> 220787@astanait.edu.kz</p>
+                            <p><i class="fa-solid fa-person"></i> <strong>Rahmetulina Asylzhan</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="slogan" class="col-lg-6 text-center">
+                    <h2 class="text-uppercase"><i class="fa-solid fa-earth-americas"></i> KazTour: Multilingual Insight
+                    </h2> <br>
+                    <p>Освойте Казахстан на всех языках c <strong>KazTour</strong>: мультитуристический подход</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center">Copyright @2024 | Designed by Zhakanova Asem and Rahmetulina Asylzhan</p>
+        </div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

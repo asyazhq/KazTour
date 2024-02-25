@@ -1,0 +1,672 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Словарь</title>
+
+  <!--link rel="stylesheet" href="style.css"-->
+  <!--favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <!-- Bootstrap Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap Link -->
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+    </script>
+
+  <!-- Font Awesome Cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <!-- Font Awesome Cdn -->
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@500&family=Raleway:wght@500&display=swap"
+    rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <!-- Google Fonts -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      scroll-behavior: smooth;
+      /*font-family: 'Lato', sans-serif;*/
+    }
+
+    /* .nav-link {
+    color: rgba(3, 3, 3, 0.801) !important;
+    margin-left: 30px;
+    cursor: pointer;
+    animation: button-shimmer 2s infinite;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.nav-link:hover {
+    animation: button-particles 1s ease-in-out infinite;
+    transform: translateY(-2px);
+    color: rgb(47, 79, 126) !important;
+}
+#landing3 {
+    background-image: url(nature\ .jpg);
+    background-position: center;
+    height: 50vh;
+} */
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 25px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 25px;
+    }
+
+    #myBtn:hover {
+      background-color: #555;
+    }
+
+    .start-header {
+      opacity: 1;
+      transform: translateY(0);
+      box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    .start-header.scroll-on {
+      box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+      padding: 10px 0;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    .start-header.scroll-on .navbar-brand img {
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    .navigation-wrap {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar-brand img {
+      display: block;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    .navbar-toggler {
+      float: right;
+      border: none;
+      padding-right: 0;
+    }
+
+    .navbar-toggler:active,
+    .navbar-toggler:focus {
+      outline: none;
+    }
+
+    .navbar-light .navbar-toggler-icon {
+      width: 24px;
+      height: 17px;
+      background-image: none;
+      position: relative;
+      border-bottom: 1px solid #000;
+      transition: all 300ms linear;
+    }
+
+    .navbar-light .navbar-toggler-icon:after,
+    .navbar-light .navbar-toggler-icon:before {
+      width: 24px;
+      position: absolute;
+      height: 1px;
+      background-color: #000;
+      top: 0;
+      left: 0;
+      content: '';
+      z-index: 2;
+      transition: all 300ms linear;
+    }
+
+    .navbar-light .navbar-toggler-icon:after {
+      top: 8px;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+      transform: rotate(45deg);
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+      transform: translateY(8px) rotate(-45deg);
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+      border-color: transparent;
+    }
+
+    .nav-link {
+      color: #212121 !important;
+      font-weight: 500;
+      transition: all 200ms linear;
+    }
+
+    #landing3 .nav-item:hover .nav-link {
+      color: #8167a9 !important;
+    }
+
+    #landing3 .nav-item.active .nav-link {
+      color: #777 !important;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 5px 0 !important;
+      display: inline-block;
+    }
+
+    #landing3 .nav-item:after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      content: '';
+      background-color: #8167a9;
+      opacity: 0;
+      transition: all 200ms linear;
+    }
+
+    #landing3 .nav-item:hover:after {
+      bottom: 0;
+      opacity: 1;
+    }
+
+    #landing3 .nav-item.active:hover:after {
+      opacity: 0;
+    }
+
+    #landing3 .nav-item {
+      position: relative;
+      transition: all 200ms linear;
+    }
+
+    #activities {
+      min-height: 100vh;
+      width: 100%;
+      margin-top: 100px;
+      padding: 25px;
+    }
+
+    #footer h2 {
+      font-family: "Roboto Slab", serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    #footer p {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings:
+        "slnt" 0;
+    }
+
+    #footer {
+      padding: 25px 25px 0px 25px;
+    }
+
+
+    .main-txt h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-weight: 700;
+      text-shadow: 0px 1px 1px black;
+    }
+
+    .main-txt h1 span {
+      color: rgb(218, 57, 148);
+    }
+
+    .activities .card {
+      border-radius: 5px;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    .activities .card img {
+      border-radius: 5px;
+    }
+
+    .activities .card .card-body {
+      background: transparent;
+    }
+
+    .activities .card .card-body h3 {
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    .activities .card .card-body p {
+      font-size: 15px;
+    }
+
+    .checked {
+      color: rgb(218, 57, 148);
+    }
+
+    .star i {
+      font-size: 15px;
+    }
+
+    .activities .card .card-body h6 {
+      font-size: 20px;
+    }
+
+    .activities .card .card-body a {
+      padding: 10px;
+      text-decoration: none;
+      background: rgb(218, 57, 148);
+      color: white;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fa-solid fa-circle-chevron-up scrolltop__icon" style="color: #4e7499; font-size: 40px;"></i>
+  </button>
+
+  <!-- Navbar Start -->
+  <section id="landing3">
+    <div class="navigation-wrap bg-light start-header start-style">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-md navbar-light">
+
+              <a class="navbar-brand" href="index.html" target="_blank"><img src="assets/Logo__1.png" width="100"
+                  height=100"></a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+                    <a class="nav-link" href="index.html">Главная</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="gid.html">Путеводитель</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                    <a class="nav-link" href="phrases.html" role="button" aria-haspopup="true"
+                      aria-expanded="false">Словарь</a>
+                  </li>
+
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+                    <a class="nav-link" href="touristpoints.html">Туристические точки</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="#footer">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar End -->
+  </section>
+
+
+  <section class="activities" id="activities">
+    <div class="container">
+      <div class="main-txt">
+        <h1 style="font-size: 80px;"><span>С</span>ловарь</h1>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+
+        <p>Этот словарь может быть очень полезен для туристов, поскольку он помогает облегчить общение во время
+          путешествия. Большинство населения владеет русским языком, и он часто используется в бизнесе, образовании и
+          повседневной жизни. Зная базовые слова и фразы на русском языке, туристы могут легче найти дорогу, заказать
+          еду, попросить помощи и вообще взаимодействовать с местными жителями. Это может сделать их пребывание более
+          приятным и безопасным.</p>
+        <h2 style="color: rgb(218, 57, 148)">Приветствие и общие фразы</h2><br>
+        <p><b>Привет</b> <i>[Privet]</i> - Hi
+          <br><b>Здравствуй(те)!</b> <i>[Zdravstvuy(te)]</i> - Hello (более формальное приветствие, которое чаще всего
+          используется при первой встрече или в официальных ситуациях.)
+          <br><b>Доброе утро</b> <i>[Dobroye utro]</i> - Good morning
+          <br><b>Добрый день</b> <i>[Dobryy den']</i> - Good afternoon
+          <br><b>Добрый вечер</b> <i>[Dobryy vecher]</i> - Good evening
+          <br><b>Спасибо</b> <i>[Spasibo]</i> - Thank you
+          <br><b>Пожалуйста</b> <i>[Pozhaluysta]</i> - Please
+          <br><b>Извините</b> <i>[Izvinite]</i> - Excuse me
+          <br><b>Да</b> <i>[Da]</i> - Yes
+          <br><b>Нет</b> <i>[Nyet]</i> - No
+          <br><b>Пока</b> <i>[Poka]</i> - Goodbye
+          <br><b>До свидания</b> <i>[Do svidaniya]</i> - See you later (формальное прощание)
+        </p>
+
+        </p><br>
+
+        <h2 style="color: rgb(218, 57, 148);">Экстренные ситуации</h2><br>
+        <p><br><b>Помогите!</b> <i>[Pomogite]</i> - Help!
+          <br>Используйте в случае непосредственной угрозы или необходимости срочной помощи.
+          <br><b>Пожар!</b> <i>[Pozhar]</i> - Fire!
+          <br>При обнаружении пожара или возникновении пожарной ситуации.
+          <br><b>Врач</b> <i>[Vrach]</i> - Doctor
+          <br><b>Полиция</b> <i>[Politsiya]</i> - Police
+          <br><b>Аптека</b> <i>[Apteka]</i> - Pharmacy
+          <br><b>Пожалуйста, позвоните в скорую помощь!</b> <i>[Pozhaluysta, pozvonite v skoruyu pomoshch]</i> - Please
+          call an ambulance!
+          <br>В случае необходимости скорой медицинской помощи.
+          <br><b>Я потерял(а) паспорт / документы.</b> <i>[Ya poteryal(a) pasport / dokumenty]</i> - I lost my passport
+          / documents.
+          <br>Когда необходимо сообщить о потере документов.
+          <br><br>Номера экстренных служб можете просмотреть в <a href="gid.html">путеводителе.</a>
+        </p><br>
+
+        <img src="photos/tourism.jpg" alt="Tourism"
+          style="margin: 1% 20%; width: 60%; height: 50%; border-radius: 5%; object-fit: cover;">
+
+        <h2 style="color: rgb(218, 57, 148);">В отеле</h2><br>
+        <p><br><b>Мне нужна одноместная/двухместная комната.</b> <i>[Mne nuzhna odnomestnaya/dvukhmestnaya komnata]</i>
+          - I need a single/double room.
+          <br><b>Я хотел бы забронировать номер.</b> <i>[Ya khotel by zabronirovat' nomer]</i> - I would like to book a
+          room.
+          <br><b>Сколько стоит проживание за ночь?</b> <i>[Skol'ko stoit prozhivanie za noch']</i> - How much is the
+          room per night?
+          <br><b>Сколько стоит за дополнительный день?</b> <i>[Skol'ko stoit za dopolnitel'nyy den']</i> - How much is
+          it for an extra day?
+          <br><b>Есть ли дополнительные расходы?</b> <i>[Yest' li dopolnitel'nye rashody]</i> - Are there any additional
+          charges?
+          <br><b>Можно заказать завтрак в номер?</b> <i>[Mozhno zakazat' zavtrak v nomer]</i> - Can I order breakfast in
+          my room?
+          <br><b>Где находится ресторан/бар?</b> <i>[Gde nakhoditsya restoran/bar]</i> - Where is the restaurant/bar
+          located?
+          <br><b>Можно ли узнать пароль от Wi-Fi?</b> <i>[Mozhno li uznat' parol ot Wi-Fi?]</i> - Can I get the Wi-Fi
+          password?
+        </p>
+
+        <h2 style="color: rgb(218, 57, 148);">Повседневние ситуации</h2><br>
+
+        <h5>Для такси </h5>
+        <p><b>Можно ли вызвать такси?</b> <i>[Mozhno li vyzvat' taksi]</i> - Can I call a taxi?
+          <br><b>Сколько стоит поездка до ...?</b> <i>[Skol'ko stoit poezdka do ]</i> - How much is the fare to
+          [destination]?
+          <br><b>Пожалуйста, отвезите меня в ...</b> <i>[Pozhaluysta otvezite menya v ]</i> - Please take me to
+          [address].
+          <br><b>Подождите меня здесь, пожалуйста.</b> <i>[Podozhdite menya zdes' pozhaluysta]</i> - Please wait for me
+          here.
+        </p>
+
+        <h5>В магазине </h5>
+        <p><b>Где находится ближайший магазин?</b> <i>[Gde nakhoditsya blizhayshiy magazin]</i> - Where is the nearest
+          store?
+          <br><b>У вас есть ...?</b> <i>[U vas est' ]</i> - Do you have [product name]?
+          <br><b>Сколько это стоит?</b> <i>[Skol'ko eto stoit]</i> - How much is it?
+          <br><b>Могу я заплатить картой?</b> <i>[Mogu li ya zaplatit' kartoy]</i> - Can I pay by card?
+          <br><b>Спасибо, я возьму это.</b> <i>[Spasibo, ya voz'mu eto]</i> - Thank you, I'll take it.
+          <br><b>Сколько я должен(а) вам?</b> <i>[Skol'ko ya dolzhen(a) vam]</i> - How much do I owe you?
+          <br><b>У вас есть сдача?</b> <i>[U vas est' sdacha]</i> - Do you have change?
+          <br><b>Могу я оплатить наличными?</b> <i>[Mogu li ya oplatit' nalichnymi]</i> - Can I pay in cash?
+          <br><b>Пожалуйста, дайте мне чек.</b> <i>[Pozhaluysta, dayte mne chek]</i> - Please give me a receipt.
+        </p>
+
+        <h2 style="color: rgb(218, 57, 148);">Ресторан </h2><br>
+        <p><br><b>Сколько стоит это блюдо?</b> <i>[Skol'ko stoit eto blyudo]</i> - How much is this dish?
+          <br><b>Я бы хотел(а) заказать...</b> <i>[Ya by khotel(a) zakazat']</i> - I would like to order...
+          <br><b>Есть ли у вас английский/русский меню?</b> <i>[Yest' li u vas angliyskiy/russkiy menyu]</i> - Do you
+          have an English/Russian menu?
+          <br><b>Можно счет, пожалуйста?</b> <i>[Mozhno schet pozhaluysta]</i> - Can I have the bill, please?
+          <br><b>Подайте мне еще воды, пожалуйста.</b> <i>[Podayte mne yeshche vody, pozhaluysta]</i> - Please bring me
+          some more water.
+          <br><b>Что вы порекомендуете?</b> <i>[Chto vy porekomenduete]</i> - What do you recommend?
+          <br><b>Могу ли я забронировать столик?</b> <i>[Mogu li ya zabronirovat' stolik]</i> - Can I book a table?
+        </p><br>
+
+        <div class="main-txt">
+          <h1><span>К</span>азахская кухня</h1>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="photos/beshbarmak.jpg" alt="beshbarmak">
+            <div class="card-body">
+              <h3>Бешбармак</h3>
+              <h5>Beshbarmak</h5>
+              <p>
+                Отварное мясо с отварным тестом и луком. Также бывают вариации с отварным картофелем.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="photos/quirdaq.jpg" alt="quirdaq">
+            <div class="card-body">
+              <h3>Куырдак</h3>
+              <h5>Quirdaq</h5>
+              <p>
+                Горячее жирное жаркое из бараньей печени, почек, сердца, легких и курдючного жира.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="photos/baursaq.jpg" alt="baursaq">
+            <div class="card-body">
+              <h3>Баурсак</h3>
+              <h5>Baursaq</h5>
+              <p>
+                Жаренные в масле шарики из теста. Традиционный казахский десерт, воздушный и хрустящий.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="photos/qazy.jpg" alt="qazy">
+            <div class="card-body">
+              <h3>Казы</h3>
+              <h5>Qazy</h5>
+              <p>
+                Домашняя колбаса, которую готовят, набивая хорошо промытую кишку кониной с ребер коня.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="photos/manty.jpg" alt="manty">
+            <div class="card-body">
+              <h3>Манты</h3>
+              <h5>Manty</h5>
+              <p>
+                Очень популярное в стране блюдо на пару из теста и рубленого небольшими кусочками мяса.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="photos/lagman.jpg" alt="lagman">
+            <div class="card-body">
+              <h3>Лагман</h3>
+              <h5>Lagman</h5>
+              <p>
+                Блюдо из длинной лапши, мяса и овощей. Казахский лагман обычно готовится из говядины без жира.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <h2 style="color: rgb(218, 57, 148);">Ориентация в городе</h2>
+      <p><br><b>Как дойти до ...?</b> <i>[Kak doyti do ]</i> - How can I get to ...?
+        <br><b>Как дойти до ближайшего метро/автобусной остановки?</b> <i>[Kak doyti do blizhayshyego metro/avtobusnoy
+          ostanovki]</i> - How can I get to the nearest metro/bus stop?
+        <br><b>Где находится ...?</b> <i>[Gde nakhoditsya ]</i> - Where is ...?
+        <br><b>Где находится туалет?</b> <i>[Gde nakhoditsya tualet]</i> - Where is the toilet located?
+        <br><b>Аэропорт</b> <i>[aeroport]</i> - airport
+        <br><b>Железнодорожный вокзал</b> <i>[zheleznodorozhnyy vokzal]</i> - train station
+        <br><b>Банк</b> <i>[bank]</i> - bank
+        <br><b>Такси</b> <i>[taksi]</i> - taxi
+        <br><b>Можно ли взять карту города?</b> <i>[Mozhno li vzyat' kartu goroda]</i> - Can I get a city map?
+        <br><b>Как найти информационный центр для туристов?</b> <i>[Kak nayti informatsionnyy tsentr dlya turistov]</i>
+        - How to find the tourist information center?
+        <br><b>Медицинский центр</b> <i>[meditsinskiy tsentr]</i> - medical center
+        <br><b>Север/юг/запад/восток</b> <i>[sever/yug/zapad/vostok]</i> - north/south/west/east
+        <br><b>Право/лево</b> <i>[pravo/levo]</i> - right/left
+        <br><b>Парк</b> <i>[park]</i> - park
+        <br><b>Музей</b> <i>[muzey]</i> - museum
+        <br><b>Ресторан</b> <i>[restoran]</i> - restaurant
+        <br><b>Какое расстояние до ...?</b> <i>[Kakoye rasstoyanie do ]</i> - What is the distance to ...?
+        <br><b>Достопримечательность</b> <i>[dostoprimechatelnost']</i> - attraction, sights, places of interest
+        <br><b>Туристическое агентство</b> <i>[turisticheskoe agentstvo]</i> - tourist agency
+        <br><b>Памятник/скульптура</b> <i>[pamyatnik/skulptura]</i> - monument/sculpture
+        <br><b>Перекресток</b> <i>[perekrestok]</i> - crossroad
+        <br><b>Светофор</b> <i>[svetofor]</i> - traffic light
+        <br><b>Улица</b> <i>[ulitsa]</i> - street
+        <br><b>Театр</b> <i>[teatr]</i> - theater
+      </p>
+      <img src="photos/map.jpg" alt="Map"
+        style="margin: 1% 20%; width: 60%; height: 50%; border-radius: 5%; object-fit: cover;">
+
+
+      <h2 style="color: rgb(218, 57, 148);">Активный отдых</h2>
+      <h5>Природа</h5>
+      <p><b>Река</b> <i>[reka]</i> - river
+        <br><b>Горы</b> <i>[gory]</i> - mountains
+        <br><b>Озеро</b> <i>[ozero]</i> - lake
+        <br><b>Лес</b> <i>[les]</i> - forest
+        <br><b>Пещера</b> <i>[peshchera]</i> - cave
+      </p>
+
+      <h5>Экология</h5>
+      <p><b>Экологически чистый</b> <i>[ekologicheski chistyy]</i> - environmentally clean
+        <br><b>Охраняемая территория</b> <i>[okhranyaemaya territoriya]</i> - protected area
+      </p>
+
+      <h5>Активный отдых</h5>
+      <p><b>Пеший поход</b> <i>[peshiy pokhod]</i> - hiking
+        <br><b>Велосипедный туризм</b> <i>[velosipednyy turizm]</i> - cycling tourism
+        <br><b>Водные виды спорта</b> <i>[vodnye vidy sporta]</i> - water sports
+        <br><b>Альпинизм</b> <i>[al'pinizm]</i> - mountaineering
+        <br><b>Каякинг</b> <i>[kayaking]</i> - kayaking
+        <br><b>Парусный спорт</b> <i>[parusnyy sport]</i> - sailing
+        <br><b>Скалолазание</b> <i>[skalolazanie]</i> - rock climbing
+        <br><b>Плавание с маской и трубкой</b> <i>[plavanie s maskoy i trubkoy]</i> - snorkeling
+        <br><b>Прыжки с парашютом</b> <i>[pryzhki s parashyutom]</i> - paragliding
+        <br><b>Катание на лыжах</b> <i>[katanie na lyzhakh]</i> - skiing
+      </p>
+
+      <h5>Погода, климат</h5>
+      <p><b>Солнечно</b> <i>[solnechno]</i> - sunny
+        <br><b>Дождливо</b> <i>[dozhdliyo]</i> - rainy
+        <br><b>Ветрено</b> <i>[vetreno]</i> - windy
+        <br><b>Засушливый</b> <i>[zasushlivyy]</i> - arid
+        <br><b>Влажный</b> <i>[vlazhnyy]</i> - humid
+        <br><b>Умеренный</b> <i>[umerennyy]</i> - moderate
+      </p>
+
+      <p><br><b>Я хочу забронировать экотур</b> <i>[Ya khochu zarezervirovat' ekotur]</i> - I want to book an ecotour
+        <br><b>Где можно арендовать велосипед?</b> <i>[Gde mozhno arendovat' velosiped]</i> - Where can I rent a
+        bicycle?
+        <br><b>Есть ли здесь туры по ...?</b> <i>[Yest' li zdes' tury po ]</i> - Are there tours here for ...?
+        <br><b>Нам нужен гид для экскурсии по ...</b> <i>[Nam nuzhen gid dlya ekskursii po ]</i> - We need a guide for a
+        tour of ...
+      </p>
+      </p>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer Start -->
+  <section id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <h2 class="text-uppercase"> Контакты:</h2>
+          <p><i class="fa-solid fa-house"></i> <strong>Astana IT University</strong></p>
+          <div class="row">
+            <div class="col-lg-6">
+              <p><i class="fa-solid fa-envelope"></i> 220537@astanait.edu.kz</p>
+              <p><i class="fa-solid fa-person"></i> <strong>Zhakanova Asem</strong></p>
+            </div>
+            <div class="col-lg-6">
+              <p><i class="fa-solid fa-envelope"></i> 220787@astanait.edu.kz</p>
+              <p><i class="fa-solid fa-person"></i> <strong>Rahmetulina Asylzhan</strong></p>
+            </div>
+          </div>
+        </div>
+        <div id="slogan" class="col-lg-6 text-center">
+          <h2 class="text-uppercase"><i class="fa-solid fa-earth-americas"></i> KazTour: Multilingual Insight
+          </h2> <br>
+          <p>Освойте Казахстан на всех языках c <strong>KazTour</strong>: мультитуристический подход</p>
+        </div>
+      </div>
+    </div> <br> <br>
+    <p class="text-center">Copyright @2024 | Designed by Zhakanova Asem and Rahmetulina Asylzhan</p>
+    </div>
+  </section>
+  <!-- Footer End -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
